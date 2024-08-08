@@ -6,6 +6,8 @@ import {useState} from 'react'
 
 function CartProduct ({productNumber, productName, productPrice, IMG,allData, setAllData, ID}){
 
+  const price = productNumber * productPrice;
+
   function handlePlusClicked(id) {
     setAllData(allData.map((data)=>{
       if(data.id === id) {
@@ -38,7 +40,7 @@ function CartProduct ({productNumber, productName, productPrice, IMG,allData, se
      <div className={styles.CartProductRightPart}>
        <div className={styles.rightPartTop}>
         <p className={styles.productName}>{productName}</p>
-        <p className={styles.productPrice}>{`$${productPrice * productNumber}`}</p>
+        <p className={styles.productPrice}>{price}</p>
        </div>
        <div className={styles.rightPartBottom}>
         <img src={minus} className={styles.countIcon} onClick={()=>{handleMinusClicked(ID)}}></img>

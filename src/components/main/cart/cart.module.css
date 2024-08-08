@@ -71,6 +71,10 @@
   text-align: right;
 }
 
+.productPrice::before {
+  content: '$';
+}
+
 .totalTitle {
   font-family: 'Noto Sans TC';
   font-size: 14px;

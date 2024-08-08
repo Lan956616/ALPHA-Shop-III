@@ -32,11 +32,13 @@ export default function ProgressControl({step, setStep}) {
     <div className={styles.progresscontrol}>
       <div className={styles.hr}></div>
       <div className={styles.buttonArea}>
-        {step === 1? '': <div className={styles.stepBack} onClick={handlePrevious}>
+        {step === 1 ? '' : f
+        <div className={styles.stepBack} onClick={handlePrevious}>
           <img src={leftArrow} className={styles.stepBackArrow}/>
           <p className={styles.stepBackContent}>上一步</p>
-        </div>}
-        <Button content={step < 3? '下一步' : '確認下單'} arrowsrc={rightArrow} step={step}  setStep={setStep}/>
+        </div> 
+        }
+        <Button content={step < 3 ? '下一步' : '確認下單' } arrowsrc={rightArrow} step={step}  setStep={setStep}/>
       </div>
 
     </div>
